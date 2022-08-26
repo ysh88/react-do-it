@@ -1,3 +1,5 @@
+import '../src/sass/materialize.scss';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
