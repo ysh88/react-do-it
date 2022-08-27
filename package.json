@@ -63,8 +63,11 @@
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "node-sass": "^7.0.1",
     "prop-types": "^15.8.1",
+    "react-test-renderer": "^18.2.0",
     "sass-loader": "^13.0.2",
     "storybook-addon-jsx": "^7.3.14",
     "webpack": "^5.74.0"
