@@ -4,19 +4,21 @@ import withStyles, { css } from './withStyles';
 
 function Text({ children, styles, large, xlarge, small, xsmall, primary, secondary }) {
   return (
-    <div
-      {...css(
-        styles.default,
-        xsmall && styles.xsmall,
-        small && styles.small,
-        large && styles.large,
-        xlarge && styles.xlarge,
-        secondary && styles.secondary,
-        primary && styles.primary
-      )}
-    >
-      {children}
-    </div>
+    <>
+      <span
+        {...css(
+          styles.default,
+          xsmall && styles.xsmall,
+          small && styles.small,
+          large && styles.large,
+          xlarge && styles.xlarge,
+          secondary && styles.secondary,
+          primary && styles.primary
+        )}
+      >
+        {children}
+      </span>
+    </>
   );
 }
 Text.propTypes = {
