@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../04/Button';
 import Text from '../04/Text';
-import withHoC from '../05/withHoC';
+import withHoC from './withHoC';
 
 export default {
   title: 'WithHoC',
