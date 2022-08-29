@@ -17,7 +17,8 @@ export default (contextKey = DEFAULT_KEY) => {
 
     getChildContext() {
       return {
-        [contextKey]: {
+        // 컨텍스트 키로 관리할 상태를 구분한다
+        [contextKey]: {//HomePageXXX에서 넘어온 contextKey
           loading: this.state.loading,
           setLoading: this.setLoading,
         },

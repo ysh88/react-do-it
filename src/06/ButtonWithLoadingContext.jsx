@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import withLoadingContext from './withLoadingContext';
 import Button from '../04/Button';
 
+
 function ButtonWithLoadingContext({ label, loading, setLoading }) {
   return (
     <>
@@ -17,4 +18,5 @@ ButtonWithLoadingContext.propTypes = {
   setLoading: PropTypes.func,
 };
 
+// 하이어오더 컴포넌트에서 컨텍스트(loading, setLoading)를 추가한 확장 컴포넌트
 export default withLoadingContext(ButtonWithLoadingContext);

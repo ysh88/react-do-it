@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { EntryPlugin } from 'webpack';
 import Button from '../04/Button';
 import withLoadingContextAndKey, { loadingPropTypes } from './withLoadingContextAndKey';
 
@@ -11,7 +10,7 @@ function ButtonWithLoadingContext({ children, loading, setLoading }) {
   );
 }
 
-ButtonWithLoadingContext.prototype = {
+ButtonWithLoadingContext.propTypes = {
   ...loadingPropTypes,
   children: PropTypes.string,
 };

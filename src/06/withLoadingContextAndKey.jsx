@@ -9,7 +9,7 @@ export default (contextKey = DEFAULT_KEY) =>
     const wrappedComponentName = displayName || componentName;
 
     function WithLoadingContext(props, context) {
-      const { loading, setLoading } = context[contextKey];
+      const { loading, setLoading } = context[contextKey];//ButtonWithXXX에서 넘어온 contextKey
       return <WrappedComponent {...props} loading={loading} setLoading={setLoading} />;
     }
     WithLoadingContext.displayName = `withLoadingContext(${wrappedComponentName})`;
