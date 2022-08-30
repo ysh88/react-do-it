@@ -15,7 +15,7 @@ function Button({
   onPress,
 }) {
   return (
-    <div>
+    <>
       <button
         {...css(
           styles.default,
@@ -30,7 +30,7 @@ function Button({
       >
         {children}
       </button>
-    </div>
+    </>
   );
 }
 
