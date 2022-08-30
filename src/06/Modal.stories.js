@@ -36,16 +36,16 @@ function ModalProviderContent(props) {
 }
 
 function ModalProviderKeyContent(props) {
-  //modalContent와 달리 훅스 사용 가능한 이유?
-  //조건문 없이 컴포넌트를 렌더링하기 때문 = 훅스 사용 규칙 위배 x
   const {
-    actions: { openModal },
+    actions: { openModal }
   } = useContext(ModalContext2);
   return (
     <>
       <div>
         <Text>다음 버튼을 눌러 모달을 실행합니다.</Text>
-        <Button onPress={() => openModal(CONFIRM_DELETE_MODAL)}>모달 열기</Button>
+        <Button onPress={() => openModal(CONFIRM_DELETE_MODAL, {id:0, name:'상품1'})}>
+          모달 열기
+        </Button>
         <Button onPress={() => openModal(CREATE_MEMBER_MODAL)}>회원가입</Button>
       </div>
     </>

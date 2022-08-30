@@ -1,24 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
+import DeleteModalContent from './DeleteModalContent';
 import { ModalContext2 } from './ModalContext';
 
 export default function createModalProvider(ContentMap = {}) {
   return function ModalProvider({ children }) {
     const [showModal, setShowModal] = useState(false);
-    const [contentId, setContentId] = useState('');
     const [modalProps, setModalProps] = useState({});
+    const [modalContent, setModalContent] = useState(null);
 
     function handleClose() {
       setShowModal(false);
     }
 
     function handleOpen(contentId, modalProps) {
-      setContentId(contentId);
       setShowModal(true);
       setModalProps(modalProps);
+      setModalContent(ContentMap[contentId]);
+    }
+    function ModalContent(props) {
+      console.log(modalContent);
+      return modalContent;
     }
 
-    const ModalContent = ContentMap[contentId];
     const value = {
       actions: {
         openModal: handleOpen,
