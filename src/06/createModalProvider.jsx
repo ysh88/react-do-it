@@ -18,7 +18,9 @@ export default function createModalProvider(ContentMap = {}) {
       setModalProps(modalProps);
     }
 
-    const ModalContent = ContentMap[contentId];
+    //처음에 useState로 연결하려고 했는데 계속 오류 발생
+    //훅스를 사용하는 것과 직접 할당하는 것의 차이점은??
+    const ModalContent = ContentMap[contentId]; 
     const value = {
       actions: {
         openModal: handleOpen,
