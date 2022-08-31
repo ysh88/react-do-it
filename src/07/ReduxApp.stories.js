@@ -7,6 +7,9 @@ import ADVReduxApp2 from './ADVReduxApp2'
 import ADVReduxApp3 from './ADVReduxApp3'
 import ADVReduxApp4 from './ADVReduxApp4'
 import ADVReduxApp5 from './ADVReduxApp5'
+import ADVReduxApp6 from './ADVReduxApp6'
+import ADVReduxApp7 from './ADVReduxApp7'
+import ADVReduxApp8 from './ADVReduxApp8'
 
 export default {
   title: 'Redux App',
@@ -20,6 +23,9 @@ const Template5 = args => <ADVReduxApp2 {...args} />;
 const Template6 = args => <ADVReduxApp3 {...args} />;
 const Template7 = args => <ADVReduxApp4 {...args} />;
 const Template8 = args => <ADVReduxApp5 {...args} />;
+const Template9 = args => <ADVReduxApp6 {...args} />;
+const Template10 = args => <ADVReduxApp7 {...args} />;
+const Template11 = args => <ADVReduxApp8 {...args} />;
 
 export const Basic = Template1.bind({});
 Basic.storyName = 'ReduxApp1';
@@ -44,3 +50,12 @@ Basic7.storyName = 'ADVReduxApp4';
 
 export const Basic8 = Template8.bind({});
 Basic8.storyName = 'ADVReduxApp5';
+
+export const Basic9 = Template9.bind({});
+Basic9.storyName = 'ADVReduxApp6';
+
+export const Basic10 = Template10.bind({});
+Basic10.storyName = 'ADVReduxApp7';
+
+export const Basic11 = Template11.bind({});
+Basic11.storyName = 'ADVReduxApp8';
