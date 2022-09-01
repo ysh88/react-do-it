@@ -1,7 +1,16 @@
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-function Input({ errorMessage, label, name, value, type, onChange, onFocus, autoFocus }) {
+function Input({
+  errorMessage,
+  label,
+  name,
+  value,
+  type,
+  onChange,
+  onFocus,
+  autoFocus,
+}) {
   const ref = useRef(null);
 
   function handleChange(e) {
@@ -18,26 +27,23 @@ function Input({ errorMessage, label, name, value, type, onChange, onFocus, auto
 
   return (
     <div className="input-field">
-      <label>
+      <input
+        id={`input_${name}`}
+        className={`validate ${errorMessage && 'invalid'}`}
+        ref={ref}
+        onChange={handleChange}
+        onFocus={onFocus}
+        value={value}
+        type={type}
+      />
+      <label className="active" htmlFor={`input_${name}`}>
         {label}
-        <input
-          id={`input_${name}`}
-          className={`validate ${errorMessage && 'invalid'}`}
-          ref={ref}
-          onChange={handleChange}
-          onFocus={onFocus}
-          value={value}
-          type={type}
-        />
-        <label className="active" htmlFor={`input_${name}`}>
-          {label}
-        </label>
-        {errorMessage && (
-          <span className="helper-text" data-error={errorMessage}>
-            {errorMessage}
-          </span>
-        )}
       </label>
+      {errorMessage && (
+        <span className="helper-text" data-error={errorMessage}>
+          {errorMessage}
+        </span>
+      )}
     </div>
   );
 }
